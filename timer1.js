@@ -1,7 +1,7 @@
 const secondsArray = process.argv.slice(2);
 // let secondsArray = [3,5,9,10,15];
 
-const alarmTimer = function (secondsArray) {
+const alarmTimer = function(secondsArray) {
   for (let second of secondsArray) {
     console.log(second);
     if (typeof secondsArray[second] === "string" || secondsArray[second] < 0) {
@@ -11,13 +11,13 @@ const alarmTimer = function (secondsArray) {
     }
     setTimeout(() => {
       process.stdout.write('BOOM');
-    }, (second *1000));
+    }, (second * 1000));
   }
 };
 alarmTimer(secondsArray);
 
 // const timerFunct = setTimeout(() => {
-//   process.stdout.write('BOOM'); // this makes a timer sound  
+//   process.stdout.write('BOOM'); // this makes a timer sound
 // }, 1000);
 // process.stdout.write('BOOM'); // this makes a timer sound
 /* Should beep at;
